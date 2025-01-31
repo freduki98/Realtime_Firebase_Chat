@@ -47,9 +47,6 @@ class ChatActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         email = auth.currentUser?.email.toString()
 
-        val firebaseDatabase = FirebaseDatabase.getInstance()
-        firebaseDatabase.setPersistenceEnabled(true)
-
         dbReference = FirebaseDatabase.getInstance().getReference("chat")
 
         setListeners()
